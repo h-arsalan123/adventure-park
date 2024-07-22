@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      label, select, textarea, button {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+      }
+      button {
+        background-color: aquamarine;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rating Page</h1>
+    <form id="rating-form">
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <br /><br />
+      <label for="review">Review:</label>
+      <textarea id="review" name="review"></textarea>
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+      const form = document.getElementById("rating-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const rating = document.getElementById("rating").value;
+        const review = document.getElementById("review").value;
+        document.getElementById(
+          "result"
+        ).innerHTML = `Rating: ${rating} <br> Review: ${review}`;
+      });
+    </script>
+  </body>
+</html>

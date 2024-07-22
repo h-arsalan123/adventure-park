@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Package</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 1440px;
+        margin: auto;
+        padding: 20px;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      button {
+        background-color: aquamarine;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      #booking-amount {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex">
+        <div>
+          <img src="TICK1.jpeg" alt="Summer Package Image" />
+        </div>
+        <div>
+          <h1>Summer Package</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae alias ullam quo explicabo illum aut, ducimus vel maxime delectus adipisci, quam molestiae tempora est iusto labore soluta a sed non?
+          </p>
+          <div>
+            <div style="display: flex; justify-content: space-between">
+              <div>
+                <label for="adults">Adults</label>
+                <input id="adults" type="number" value="0" />
+
+                <label for="children">Children</label>
+                <input id="children" type="number" value="0" />
+
+                <button id="enter-btn">Enter</button>
+                <div id="booking-amount" style="display: none"></div>
+                <button id="confirm-btn" style="display: none">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const adultInput = document.getElementById("adults");
+      const childInput = document.getElementById("children");
+      const enterBtn = document.getElementById("enter-btn");
+      const confirmBtn = document.getElementById("confirm-btn");
+      const bookingAmount = document.getElementById("booking-amount");
+
+      enterBtn.onclick = function () {
+        const adultValue = parseInt(adultInput.value);
+        const childValue = parseInt(childInput.value);
+        const totalAmount = (adultValue + childValue) * 1500;
+        bookingAmount.innerHTML = `Total Booking Amount: Rs. ${totalAmount}`;
+        bookingAmount.style.display = "block";
+        confirmBtn.style.display = "block";
+      };
+
+      confirmBtn.onclick = function () {
+        window.location.href = "thank-you.html";
+      };
+    </script>
+  </body>
+</html>

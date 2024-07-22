@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Water Park - Contact</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        background-color: bisque;
+        align-items: center;
+        padding: 10px 20px;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      ul li {
+        margin-left: 14px;
+      }
+      ul a {
+        text-decoration: none;
+        color: black;
+      }
+      form {
+        display: flex;
+        gap: 10px;
+      }
+      form input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      form button {
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: aquamarine;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      main {
+        max-width: 1440px;
+        margin: auto;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        background-color: antiquewhite;
+        padding: 5px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+      }
+      button.submit-btn {
+        background-color: aquamarine;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Adventure Water Park</h1>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <form action="">
+        <input type="text" placeholder="Search" />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <h1>For Contact Booking and any Queries</h1>
+      <p>For Queries: 12343527528</p>
+      <p>For on call Booking: 74625796818</p>
+      <img src="wtrprk.jpg" alt="Water Park Image" />
+
+      <h2>
+        Fill this form to receive more details and weekly newsletters! It will also help us to contact you if there are any delays in your appointment. Thank you!
+      </h2>
+
+      <form action="submit.html">
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+
+        <label for="age">Age</label>
+        <input id="age" type="number" />
+
+        <label for="email">E-mail</label>
+        <input id="email" type="email" />
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" />
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
